@@ -20,12 +20,12 @@ int main(int argc, char *argv[])
     int z = 0;
     for (int i = 0; i < argc; i++)
     {
-        for (int j = 0; j < read_line(argv[i]); j++)
+        for (int j = 0; j < length(argv[i]); j++)
         {
             sub[z] = argv[i][j];
             z++;
         }
-        if (i != 3)
+        if (i != argc-1)
         {
             sub[z] = ' ';
             z++;
@@ -37,10 +37,10 @@ int main(int argc, char *argv[])
     }
     printf("argc = %d\n", argc);
     for (int i = 0; i < argc; i++)
-        printf("--> &s\n", argv[i]);
+        printf("--> %s\n", argv[i]);
     printf("file = %s, substr = %s\n", argv[1], sub);
 
-    FILE *fp = fopen("test.txt", "r");
+    FILE *fp = fopen(argv[1], "r");
     char buff[500];
     int line = 1;
     while (fgets(buff, sizeof(buff), fp) != NULL)
