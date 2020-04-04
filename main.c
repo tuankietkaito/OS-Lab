@@ -1,22 +1,41 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "readline.h"
 #include "findsubstr.h"
 
-int read_line(char *str)
+int length(char *s)
 {
     int count = 0;
-    do
+    while (*s != '\0')
     {
         count++;
-        str++;
-        if (*str == '\n')
-            return count;
-    } while (*str != '\0');
-    return -1;
+        s++;
+    }
+    return count;
 }
 
-int main()
+int main(int argc, char *argv[])
 {
+    char sub[100];
+    int z = 0;
+    for (int i = 0; i < argc; i++)
+    {
+        for (int j = 0; j < read_line(argv[i]); j++)
+        {
+            sub[z] = argv[i][j];
+            z++;
+        }
+        if (i != 3)
+        {
+            sub[z] = ' ';
+            z++;
+        }
+        else
+        {
+            sub[z] = '\0';
+        }
+    }
+
     FILE *fp = fopen("test.txt", "r");
     char buff[500];
     int line = 1;
