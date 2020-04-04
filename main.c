@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "findsubstr.h"
 
 int read_line(char *str)
 {
