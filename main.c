@@ -18,14 +18,14 @@ int main(int argc, char *argv[])
 {
     char sub[100];
     int z = 0;
-    for (int i = 0; i < argc; i++)
+    for (int i = 2; i < argc; i++)
     {
         for (int j = 0; j < length(argv[i]); j++)
         {
             sub[z] = argv[i][j];
             z++;
         }
-        if (i != argc-1)
+        if (i != argc - 1)
         {
             sub[z] = ' ';
             z++;
@@ -46,6 +46,7 @@ int main(int argc, char *argv[])
     while (fgets(buff, sizeof(buff), fp) != NULL)
     {
         printf("Line %d: read_line = %d - %s", line, read_line(buff), buff);
+        printf("==> Find = %d\n", find_sub_string(buff, sub));
         line++;
     }
     fclose(fp);
