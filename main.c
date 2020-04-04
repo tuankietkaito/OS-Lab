@@ -35,6 +35,10 @@ int main(int argc, char *argv[])
             sub[z] = '\0';
         }
     }
+    printf("argc = %d\n", argc);
+    for (int i = 0; i < argc; i++)
+        printf("--> &s\n", argv[i]);
+    printf("file = %s, substr = %s\n", argv[1], sub);
 
     FILE *fp = fopen("test.txt", "r");
     char buff[500];
