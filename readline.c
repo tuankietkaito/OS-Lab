@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include "readline.h"
 
 int read_line(char *str)
