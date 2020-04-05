@@ -1,0 +1,10 @@
+EXERCISE 1
+
+1. Compiling a program in the first time usually takes a longer time in comparison with the next 
+   re-compiling. What is the reason?
+        
+
+
+2. Is there any Makefile mechanism for other programming languages? If it has, give an example?
+
+3. In case of source code files located in different places, how can we write a Makefile?

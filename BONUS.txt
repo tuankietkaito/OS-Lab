@@ -1,0 +1,20 @@
+Bonus: Any other way to save and quit? what is the different between?
+    There are 2 other ways to save and quit in vim:
+    1. First type :w and press Enter to save and then type :q and press Enter to quit.
+       This way is actually not different from typing :wq and press Enter.
+    2. Type :x and press Enter
+       The difference between these two commands is that :x writes the buffer to the file only if 
+       there are unsaved changes, whereas :wq always writes the buffer to file and updates the file 
+       modification time.
+
+Bonus: What is Interpreter? what is the different between compiler and interpreter?
+        An interpreter is a computer program that is used to directly execute program instructions 
+    written using high-level programming languages. The interpreter transforms the high-level program 
+    into an intermediate language that it then executes, or it could parse the high-level source code 
+    and then performs the commands directly, which is done line by line.
+        Interpreters and compilers are very similar in structure. The main difference is that an 
+    interpreter directly executes the instructions in the source programming language while a compiler 
+    translates those instructions into efficient machine code. The other different is that in compiler, 
+    program execution is separated from the compilation and it performed only after the entire output 
+    program is compiled whereas in interpreter, program execution is a part of interpretation process, 
+    so it is performed line by line intermidiately.
