@@ -1,10 +1,26 @@
 EXERCISE 1
 
 1. Compiling a program in the first time usually takes a longer time in comparison with the next 
-   re-compiling. What is the reason?
-        
-
+   re-compiling. What is the reason?     
 
 2. Is there any Makefile mechanism for other programming languages? If it has, give an example?
+   JAVA Makefile: using java compiler (javac)
+   Example: a simple makefile for compiling 3 java classes
+         # Makefile
+         # -g flag: generate all debugging info
+         # typing 'make' will invoke the first target entry in the makefile ("all" in this case)
+         all: Average.class Square.class Power.class
+         
+         Average.class: Average.java
+            javac -g Average.java
+
+         Square.class: Square.java
+            javac -g Square.java
+
+         Power.class: Power.java
+            javac -g Power.java
+
+         clean:
+            rm *.class
 
 3. In case of source code files located in different places, how can we write a Makefile?
